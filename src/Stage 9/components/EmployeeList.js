@@ -6,7 +6,14 @@ class EmployeeList extends Component {
       <div>
         <ul className="listContainer">
           { 
-            // Map over this.props.employees
+            this.props.employees.map(e => {
+              <li 
+                className='listText' 
+                key={employee.id}
+                onClick={() => this.props.selectedEmployees(employee)}
+              > {employee.name}
+              </li>
+            })
           }
         </ul>
       </div>

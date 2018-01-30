@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 
 class EmployeeEditor extends Component {
   // constructor
+  constructor() {
+    super();
+
+    this.state = {
+      employee: null,
+      originalEmployee: null,
+      notModified: true,
+    };
+  }
 
   // componentWillReceiveProps
 
